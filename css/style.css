@@ -1,0 +1,95 @@
+html,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: Source Code Pro, monospace;
+}
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat center/cover url(../img/bg.jpg);
+}
+.container {
+  backdrop-filter: blur(9px) saturate(200%);
+
+  background-color: rgba(0, 0, 0, 0.69);
+  border-radius: 12px;
+  padding: 15px;
+  width: 50vw;
+}
+.screen {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+#show {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  color: transparent;
+  text-shadow: 0 0 0 #1d3557;
+}
+.calc {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 50vh;
+}
+.row {
+  border-bottom: 1px solid #006d77;
+  min-width: 100%;
+  height: 25%;
+  flex: 0 1 25%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.row:last-child {
+  border-bottom: none;
+}
+
+.number,
+.btn {
+  flex: 0 1 20%;
+  height: 50px;
+  font-size: 2rem;
+  border: 1px solid #006d77;
+  cursor: pointer;
+  background-color: slateblue;
+  border-radius: 8px;
+}
+.clear{
+    background-color: rgb(132, 0, 255);
+}
+.equally{background-color: rgb(10, 233, 65);}
+.plus,.minus,.multiply,.divide{background-color: rgb(189, 192, 31);}
+.number:hover {
+  background-color: #83c5be;
+  color: #fff;
+  border-radius: 10px;
+  transition: background 0.5s ease-in-out, color 1s ease, border-radius 1s ease;
+}
+.btn:hover {
+  color: #fff;
+  background: #219ebc;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background 0.5s ease-in-out, color 0.5s ease,
+    border-radius 1s ease;
+}
+.number:active {
+  transform: translateY(2px);
+  color: #004b52;
+  transition: color 0.1s linear;
+}
+.btn:active {
+  transform: translateY(2px);
+  color: #004b52;
+  transition: color 0.1s linear;
+}
